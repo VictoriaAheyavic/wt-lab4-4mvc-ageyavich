@@ -1,6 +1,6 @@
 # ============ СТАДИЯ 1: СБОРКА ============
 # Берем официальный образ .NET SDK (там есть компилятор)
-FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+FROM mcr.microsoft.com/dotnet/sdk:10.0 AS build
 WORKDIR /src
 
 # Копируем только файл проекта и восстанавливаем зависимости (кэшируется)
@@ -13,7 +13,7 @@ RUN dotnet publish -c Release -o /app/publish /p:UseAppHost=false
 
 # ============ СТАДИЯ 2: ЗАПУСК ============
 # Берем легкий образ без компилятора, только для запуска
-FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS final
+FROM mcr.microsoft.com/dotnet/aspnet:10.0 AS final
 WORKDIR /app
 
 # Копируем готовые файлы из первой стадии
