@@ -1,0 +1,58 @@
+﻿@{
+    ViewData["Title"] = "Главная";
+}
+
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-8 text-center">
+            <h1 class="display-4 fw-bold mb-3">
+                🛒 Система управления товарами
+            </h1>
+            <p class="lead text-muted mb-4">
+                Веб-приложение интернет-магазина на ASP.NET Core MVC.
+                Управляйте каталогом товаров: просматривайте,
+                добавляйте, редактируйте и удаляйте записи.
+            </p>
+            <a asp-controller="Product" asp-action="Index"
+               class="btn btn-primary btn-lg px-4">
+                Перейти к товарам →
+            </a>
+        </div>
+    </div>
+
+    <div class="row g-4 mt-5">
+        <div class="col-md-4">
+            <div class="card h-100 shadow-sm rounded-4 border-0">
+                <div class="card-body text-center">
+                    <div class="fs-1 mb-2">📋</div>
+                    <h5 class="card-title">Каталог</h5>
+                    <p class="card-text text-muted">
+                        Полный список товаров с ценами и категориями.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card h-100 shadow-sm rounded-4 border-0">
+                <div class="card-body text-center">
+                    <div class="fs-1 mb-2">➕</div>
+                    <h5 class="card-title">Добавление</h5>
+                    <p class="card-text text-muted">
+                        Быстрое добавление новых товаров через форму.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card h-100 shadow-sm rounded-4 border-0">
+                <div class="card-body text-center">
+                    <div class="fs-1 mb-2">🔍</div>
+                    <h5 class="card-title">Подробности</h5>
+                    <p class="card-text text-muted">
+                        Детальная информация о каждом товаре.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
